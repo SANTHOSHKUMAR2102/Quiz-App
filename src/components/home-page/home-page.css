@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.title {
+  /* position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+  
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+h2 {
+  cursor: pointer;
+  margin: 10px;
+  font-size: 30px;
+  color: rgb(61, 61, 61);
+  transition: font-size 0.3s, color 0.3s; 
+} 
+
+.one {
+  animation: fontMove 2s alternate infinite;
+}
+.two {
+  animation: fontMove 2s alternate 3s infinite;
+}
+.three {
+  animation: fontMove 2s alternate 9s infinite;
+} 
+
+h2:hover {
+  color: darkgreen; 
+}
+
+@keyframes fontMove {
+  from {
+    font-size: 30px;
+  }
+  to {
+    font-size: 50px;
+  }
+} 
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  align-items: center;
+}
+
+nav h1 {
+  cursor: pointer;
+}
+
+nav button {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 20px;
+  color: green;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+nav button:hover {
+  background-color: rgb(188, 223, 188);
+}
+
+
+@media (max-width: 481px) {
+  h2{
+    font-size: 10px;
+  }
+
+  @keyframes fontMove {
+    from {
+      font-size: 10px;
+    }
+    to {
+      font-size: 30px;
+    }
+  } 
+}
